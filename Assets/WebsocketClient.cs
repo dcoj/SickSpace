@@ -80,7 +80,7 @@ public class WebsocketClient : MonoBehaviour
         if (target != null && camera != null)
         {
             Vector3 cameraPosition = camera.position; // Get the camera's position
-            Vector3 receivedOffset = new Vector3(x, y, z); // Create a Vector3 from the received data
+            Vector3 receivedOffset = new Vector3(x, y, (z * (-1))); // Create a Vector3 from the received data
 
             // Option 1: Target position is the camera's position *minus* the received offset
             // This would position the target relative to the camera, offset by the received values.
